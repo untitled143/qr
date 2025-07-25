@@ -25,7 +25,7 @@ const QrScanner = ({ onScanSuccess, onScanError }) => {
       const onScanSuccessLocal = async (decodedText, decodedResult) => {
         console.log(`Code matched = ${decodedText}`, decodedResult);
         html5QrcodeScannerRef.current.clear(); // Stop scanning after a successful scan
-        const decodedId=decodedText.slice(0,decodedText.length-1);
+        const decodedId=decodedText
         console.log(decodedId)
         setScanResult(decodedId);
         setMessage('Processing scanned QR code...');
